@@ -1,0 +1,93 @@
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 640px;
+    height: 480px;
+    margin: 0 auto;
+}
+
+.active {
+    float: left;
+    position: relative;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+.carousel-item {
+    float: left;
+    position: relative;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+.btn-carousel {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.btn-carousel.btn-prev {
+    left: 0;
+    background: url("./img/back.png");
+}
+
+.btn-carousel.btn-next {
+    right: 0;
+    background: url("./img/next.png");
+}
+
+.carousel .carousel-content {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+    color: #ffffff;
+}
+
+.carousel .carousel-content .carousel-content-inner {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.carousel .carousel-content .text-container {
+    text-align: center;
+}
+
+.carousel-bg::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 200;
+}
